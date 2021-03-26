@@ -1,0 +1,78 @@
+app.controller('UserController', function($scope, $http) {
+    // $scope.level = [level_name : 'admin'] ;
+    $scope.startPage = function() {
+        $scope.loaduser();
+    }; 
+
+    $scope.actionSave = function() {
+        if($scope.input.username == undefined || $scope.input.password == undefined  ){
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Fail',
+                text: 'โปรดกรอก User และ Password ให้ครบ'
+              })
+        }else{
+            $http.post('../api/UserSave.php', $scope.input).then(res => {
+                // console.log(res.data.message)
+                if (res.data.message == 'success') {
+                    Swal.fire({
+                        icon: 'Success',
+                        title: 'Save Success',
+                        text: 'บันทึกสำเร็จ'
+                      })
+                      $scope.loaduser();
+                      $('#modalUser').modal('hide');
+                }else if(res.data.message == 'invalid') {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error Fail',
+                        text: 'บันทึกำม่สำเร็จ'
+                      })
+                }
+              });
+        }
+
+    };
+
+    $scope.modalAdd = function(){
+        $scope.input = {};
+        $('#modalUser').modal('show');
+    }
+
+    $scope.modalEdit = function(input) {
+        $scope.input = {};
+        $scope.input = input;
+        $('#modalUser').modal('show');
+    };
+
+    $scope.loaduser = function() {
+        $http.post('../api/User.php').then(res => {
+            $scope.users = res.data.user;
+            console.log(res.data.user)
+        });
+    };
+
+    $scope.delete = function(input){
+        var id = input.id
+        Swal.fire({
+            title: 'ยืนยันการลบ',
+            text: "ต้องการลบหรือไม่",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes'
+          }).then((result) => {
+            if (result.isConfirmed) {
+            $http.post('../api/UserDelete.php', id).then(res => {
+                $scope.users = res.data.user;
+                $scope.loaduser(); Swal.fire(
+                    'ลบ!',
+                    'ลบสำเร็จ',
+                    'success'
+                  )
+            });
+            }
+          })
+    }
+})
