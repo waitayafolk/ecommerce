@@ -50,7 +50,7 @@
 </body>
 
 <script type="text/javascript" src="controller/index.js"></script>
-<script type="text/javascript" src="controller/login.js"></script>
+<script type="text/javascript" src="controller/shop.js"></script>
    <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
