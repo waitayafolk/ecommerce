@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div> 
-        <div class="modal" id="modalUser" tabindex="-1" role="dialog">
+        <div class="modal fade" id="modalUser" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-aqua-active">
@@ -159,7 +159,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <div class="box box-success">
                                         <div class="box-body">
                                             <div>
@@ -169,7 +169,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 
                             </div>
                             <div class="text-center">

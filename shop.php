@@ -69,8 +69,8 @@
 <div class="wrapper">
 <div ng-app="myApp" ng-controller="ShopController" ng-init="startPage()">
     <div class="container-fluid" style="background-color: #fff; width: 80%">
-      <h2>{{ branch.branch_name }} ({{ branch.branch_name_eng }})</h2>
-      <h4>โทร. {{branch.tel }}</h4>
+      <h2>ร้านค้าออนไลน์ ArtZaDa</h2>
+      <h4>โทร. 045-495-447</h4>
       <h4>สั่งสินค้าออนไลน์ Delivery ส่งถึงบ้าน</h4>
       <div>&nbsp;</div>
     </div>
@@ -78,7 +78,7 @@
       <div>
         <ul class="nav navbar-nav">
           <li>
-            <a data-toggle="modal" data-target="#modalForm"><i class="fa fa-shopping-cart"></i> สินค้าในตะกร้า
+            <a ng-click="confirm()" ><i class="fa fa-shopping-cart"></i> สินค้าในตะกร้า
               <span class="label label-danger">{{ countItem }}</span>
             </a>
           </li>
@@ -93,7 +93,7 @@
             <div class="">
               <div class="panel-body" style="padding: 0px">
                 <p style="padding: 5px; margin-top:0px">
-                  <div><img src="image/default_image.png" width="100%" /></div>
+                  <div><img src="image/unnamed.png" width="100%" /></div>
                   <div style="padding: 5px">
                     <div>{{ item.product_name }}</div>
                     <div style="margin-top: 10px; text-align: center">
@@ -148,9 +148,9 @@
                     <button class="btn btn-danger" ng-click="reduceFromCart(item)">
                       <i class="fa fa-minus"></i>
                     </button>
-                    <button class="btn btn-danger" ng-click="removeFromCart(item)">
+                    <!-- <button class="btn btn-danger" ng-click="removeFromCart(item)">
                       <i class="fa fa-times"></i>
-                    </button>
+                    </button> -->
                   </td>
                 </tr>
               </tbody>

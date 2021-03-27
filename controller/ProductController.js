@@ -21,7 +21,7 @@ app.controller('ProductController', function($scope, $http) {
                   })
                 $scope.loadproduct();
                 $('#modalUser').modal('hide');
-            }ฆ
+            }
         });
     };
 

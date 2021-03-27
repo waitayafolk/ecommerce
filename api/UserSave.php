@@ -15,7 +15,6 @@ $params = json_decode(file_get_contents('php://input'));
             ':username' => $params->username,
             ':password' => $params->password,
             ':level' => $params->level
-            
         );
         $stmt = $pdo->prepare($sql);
         $stmt->execute($user);

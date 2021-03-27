@@ -1,37 +1,35 @@
-app.controller("Clt_login",function ($scope, $http) {
-    $scope.startPage = function() {
-    };
+app.controller("Clt_login",function($scope,$http){
     $scope.user = {};
 
     $scope.login = function(){
-        // console.log($scope.user)
-        if($scope.user.username == undefined || $scope.user.password == undefined ){
+        if( $scope.user.username == undefined || $scope.user.password == undefined  ){
             Swal.fire({
-                icon: 'error',
-                title: 'Login Fail',
-                text: 'โปรดกรอก User และ Password ให้ครบ'
-              })
+                icon:'error',
+                title:'login fail',
+                text : 'กรุณากรอก User เเละ Password'
+            }) 
         }else{
             $http({
                 url:"api/login.php",
-                method: "POST",
-                data: $scope.user,
-              }).then(function (data) {
-                if (data.data.message == "success") {
+                method:"POST",
+                data : $scope.user,
+            }).then(function(data){
+                if(data.data.message == "success"){
                     Swal.fire({
-                        icon: 'success',
-                        title: 'Login Success',
-                        text: 'รหัสผ่านถูกต้อง'
-                      })
-                      window.location.replace('/ecommerce/views/index.php');
-                }else if(data.data.message == "invalid") {
+                        icon:'success',
+                        title:'login Success',
+                        text : 'รหัสผ่านถูกต้อง'
+                    })
+                    window.location.replace('/ecommerce/views/index.php');
+                }else{
                     Swal.fire({
-                        icon: 'error',
-                        title: 'Login Fail',
-                        text: 'รหัสผ่านไม่ถูกต้อง'
-                      })
+                        icon:'error',
+                        title:'login fail',
+                        text : 'รหัสผ่านไม่ถูกต้อง'
+                    })
                 }
-              });
+            })
         }
+        
     }
 })

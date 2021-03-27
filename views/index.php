@@ -39,8 +39,10 @@
 
 <script type="text/javascript" src="../controller/index.js"></script>
 <script type="text/javascript" src="../controller/UserController.js"></script>
-<script type="text/javascript" src="../controller/ProductController.js"></script>
 <script type="text/javascript" src="../controller/GroupProductController.js"></script>
+<script type="text/javascript" src="../controller/ProductController.js"></script>
+<script type="text/javascript" src="../controller/OrderController.js"></script>
+
 
 <script src="../plugins/jquery/jquery.min.js"></script>
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

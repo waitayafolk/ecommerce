@@ -1,12 +1,19 @@
 app.controller('GroupProductController', function($scope, $http) {
     $scope.groups = [];
-    $scope.input = {};
-    $scope.importdata = {};
-    $scope.importdata.data = "";
     $scope.startPage = function() {
         $scope.loadGroupProduct();
     };
 
+    $scope.loadGroupProduct = function() {
+        $http.post('../api/GroupProduct.php').then(res => {
+            $scope.groups = res.data.group_product;
+        });
+    };
+
+    $scope.modalAdd = function() {
+        $scope.input = {};
+        $('#modalGroupProduct').modal('show');
+    };
 
     $scope.actionSave = function() {
         $http.post('../api/GroupProductSave.php', $scope.input).then(res => {
@@ -19,20 +26,7 @@ app.controller('GroupProductController', function($scope, $http) {
                 $scope.loadGroupProduct();
                 $('#modalGroupProduct').modal('hide');
             }
-            
         });
-    };
-
-
-    $scope.loadGroupProduct = function() {
-        $http.post('../api/GroupProduct.php').then(res => {
-            $scope.groups = res.data.group_product;
-        });
-    };
-
-    $scope.modalAdd = function() {
-        $scope.input = {};
-        $('#modalGroupProduct').modal('show');
     };
 
     $scope.modalEdit = function(input) {
@@ -73,4 +67,4 @@ app.controller('GroupProductController', function($scope, $http) {
             }
           })
     };
-});
+})

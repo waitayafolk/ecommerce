@@ -6,7 +6,9 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard 3</title>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -22,7 +24,7 @@
 <!-- class="bg-gradient-primary" -->
 <body class="bg-gradient-dark " ng-app="myApp" ng-controller="Clt_login" ng-init="startPage()">
 <div class="bg-gray active text-white" style="padding: 10px; font-size:20px">
-                <i class="fa fa-clock"></i> ระบบร้านค้าออนไลน์-ส่ง 1.0.0.1
+                <i class="fa fa-clock"></i> ระบบร้านค้าออนไลน์ 1.0.0.1
             </div>
     <div class="container">
         <div class="row justify-content-center align-items-center" style="height:80vh">
@@ -50,7 +52,7 @@
 </body>
 
 <script type="text/javascript" src="controller/index.js"></script>
-<script type="text/javascript" src="controller/shop.js"></script>
+<script type="text/javascript" src="controller/login.js"></script>
    <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->

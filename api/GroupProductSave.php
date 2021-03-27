@@ -2,7 +2,6 @@
 include('condb.php');
 $params = json_decode(file_get_contents('php://input'));
 
-// print_r($params);exit();
 if(empty($params->id)){
     $sql = "    
     INSERT INTO tb_group_product(group_code ,group_product_name ,group_product_name_eng ,detail ,status )VALUE
@@ -30,7 +29,6 @@ if(!empty($params->id)){
         $stmt = $pdo->prepare($sql);
         $stmt->execute($group);
 }
-
         echo json_encode(array('message' => 'success'));
 
 ?>

@@ -52,6 +52,14 @@ echo '
             </a>
           </li>
           <li class="nav-item">
+            <a href="?mymenu=Order" class="nav-link">
+              <i class="nav-icon fas fa-th-list"></i>
+              <p>
+                Order Online
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" ng-click="logout()">
               <i class="nav-icon fas fa-sign-out"></i>
               <p>
@@ -74,7 +82,10 @@ echo '
                         include("product.php");
                         }
                         else if ($mymenu == "product_gruop") {
-                        include("product_group.php");
+                        include("product_gruop.php");
                         }
+                        else if ($mymenu == "Order") {
+                          include("order.php");
+                          }
                         ?>
   </div>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 date_default_timezone_set("Asia/Bangkok");
 
 include 'config.php';
@@ -10,4 +10,5 @@ $pwd = $pass;
 $pdo = new PDO($dsn, $usr, $pwd);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
 ?>

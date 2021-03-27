@@ -1,18 +1,17 @@
 <div ng-controller="UserController" ng-init="startPage()">
     <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">จัดการสมาชิก</h6>
-            </div>
-                <div class="card-body">
-                    <button class="btn btn-primary btn-icon-split" ng-click="modalAdd()">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                        <span class="text">เพิ่มสมาชิกร้าน</span>
-                    </button>
-                </div>
-            <div>
+        <div div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold ">จัดการสมาชิก</h6>
+        </div>
             <div class="card-body">
+                <button class="btn btn-primary btn-icon-split" ng-click="modalAdd()">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">เพิ่มสมาชิกร้าน</span>
+                </button>
+            </div>
+        <div class="card-body">
                 <div class='table-responsive'>
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
@@ -47,8 +46,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div> 
+            </div> 
         <div class="modal fade" id="modalUser" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -68,7 +66,7 @@
                                                 <label>
                                                         รหัสผู้ใช้ *
                                                 </label>
-                                                <input class="form-control" ng-model="input.user_code" required/>
+                                                <input class="form-control" ng-model="input.user_code"/>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +90,7 @@
                                                 <label>
                                                         Username *
                                                 </label>
-                                                <input class="form-control" ng-model="input.username" />
+                                                <input class="form-control" ng-model="input.username"  />
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +102,7 @@
                                                 <label>
                                                         Password *
                                                 </label>
-                                                <input type='password' class="form-control" ng-model="input.password" />
+                                                <input type='password' class="form-control" ng-model="input.password"  />
                                             </div>
                                         </div>
                                     </div>
@@ -119,7 +117,7 @@
                                                 <select ng-model="input.level" class="form-control">
                                                     <option value="">-Choose-</option>
                                                     <option value="admin">Admin</option>
-                                                    <option value="sale">Sale</option>
+                                                    <option value="user">User</option>
                                                     <option value="member">Member</option>
                                                 </select>
                                             </div>
@@ -139,5 +137,5 @@
                 </div>
             </div>
         </div> 
-    </div>
+    </div>      
 </div>
