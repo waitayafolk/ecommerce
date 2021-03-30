@@ -9,9 +9,10 @@ app.controller('OrderController', function($scope, $http) {
         });
     };
 
-    $scope.detail = function(input){
+    $scope.detail_order = function(input){
         $http.post('../api/Order_detail.php', input).then(function(res) {
             $scope.orders_detail = res.data.order_detail;
+            // console.log($scope.orders_detail)
             $('#modalorder_detail').modal('show');
         });
     }

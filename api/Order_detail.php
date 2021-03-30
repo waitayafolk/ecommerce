@@ -14,6 +14,6 @@ $params = json_decode(file_get_contents('php://input'));
     $stmt->execute();
 
     $order_detail = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    print_r($order_detail);exit();
+    // print_r($order_detail);exit();
         echo json_encode(array('order_detail' => $order_detail));
 ?>

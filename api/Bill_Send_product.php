@@ -164,56 +164,8 @@ $address = $_REQUEST["address"];
                                 <table width='100%' style='font-size:16px'>
                                     <tr>
                                         <td  style='text-align:center'>
-                                        <div>&nbsp;</div>
-                                            <?php  
-                                                echo $remark;
-                                            ?>
-                                            <div>&nbsp;</div>
-
-                                        </td>
-                                    </tr>                   
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td width='45%'>
-                    <table class='border-collapse' border='1' width='100%'>
-                        <tr>
-                            <td width='40%'  style='padding-top:5px; padding-left:5px; padding-bottom:5px;   font-size:18px; text-align:center'>
-                                <strong>PAYMENT</strong>
-                            </td>
-                            <td style='text-align:right; font-size:16px; margin-right:5px'>
-                                <?php 
-                                if($payment == 'credit'){
-                                    $total_bill = number_format($total - $discount - $matjam,2);
-                                    $pay_text = 'ค้างชำระ' .'&nbsp;'. $total_bill.'บาท';     
-                                    echo $pay_text;
-                                }if($payment == 'cash'){
-                                    $total_bill = $total - $discount;         
-                                    $pay_text = 'ชำระเเล้ว';
-                                    echo $pay_text;
-                                }
-                                //  echo 
-                                ?>
-                                &nbsp;
-                            </td>
-                        </tr>    
-                        <tr>
-                            <td class="pagebreak" colspan='2'>
-                                <table width='100%'>
-                                    <tr>
-                                        <td style='text-align:center;font-size:16px;'>
-                                        <div>&nbsp;</div>
-                                            <?php 
-                                            if($payment == 'credit'){
-                                                echo 'ค้างชำระ';
-                                            }if($payment == 'cash'){
-                                                echo 'ชำระเเล้วเงินสด';
-                                            }
-                                                // echo $payment ; 
-                                            ?>
-                                            <div>&nbsp;</div>
+                                        <div>ใส่หมายเหตุ</div>
+                                          
                                         </td>
                                     </tr>                   
                                 </table>
@@ -223,29 +175,7 @@ $address = $_REQUEST["address"];
                 </td>
             </tr>
         </table>    
-        <!-- <table class='border-collapse' border='1' width='120%'>
-            <tr>
-                <td width='20%' style='padding-top:5px; padding-left:5px; padding-bottom:5px; font-size:20px; text-align:center'>
-                    <div class="pull-right">
-                        <img src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chl=<?php echo $website?>" title="Link to my Website" />
-                    </div> 
-                </td>
-                <td width='20%' style='padding-top:5px; padding-left:5px; padding-bottom:5px; font-size:20px; text-align:center'>
-                    <div class="pull-right">
-                        <img src="<?php echo $host ?>/uploads_logo/<?php echo $logo ?>"  width="70%" height="70%"title="Link to my Website" />
-                    </div> 
-                </td>
-                <td width='70%'>
-
-                <svg class="barcode"
-                    jsbarcode-value="<?php echo $inv_code?>">
-                </svg>
-                <script type="text/javascript">
-                    JsBarcode(".barcode").init();   
-                </script>                                                   
-                </td>
-            </tr>
-        </table>     -->
+        
     </body>
     </html>
 

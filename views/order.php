@@ -35,8 +35,8 @@
                                     <i class="fa fa-print"> 
                                     </i>
                                 </button>
-                                <button class="btn btn-primary" ng-click="detail(order)">
-                                    <i class="fa fa-pencil-alt"> 
+                                <button class="btn btn-primary" ng-click="detail_order(order)">
+                                    <i class="fa fa-list"> 
                                     </i>
                                 </button>
                                 <button class="btn btn-danger" ng-click="delete(order)">
@@ -52,6 +52,7 @@
         <div class="modal fade" id="modalorder_detail" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
+                    <div class="card-body">
                     <div class='table-responsive'>
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
@@ -73,6 +74,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
                     </div>
                 </div>
             </div>
